@@ -20,7 +20,115 @@
         @endif
     </head>
     <body>
-        <h1>Hello World</h1>
+      
+       
+            @extends('layouts.app')
+
+@section('content')
+    <!-- Hero Section -->
+    <div class="bg-blue-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Bookstore</h1>
+            <p class="text-xl mb-8">Discover your next favorite book from our extensive collection</p>
+            <a href="{{ route('books.index') }}" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                Browse Books
+            </a>
+        </div>
+    </div>
+
+    <!-- Featured Books Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Books</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Book Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-400">Book Cover</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Book Title</h3>
+                        <p class="text-gray-600 mb-4">By Author Name</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold">$19.99</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-400">Book Cover</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Another Book</h3>
+                        <p class="text-gray-600 mb-4">By Another Author</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold">$24.99</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more book cards as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-gray-50 transition">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-book fa-2x"></i>
+                    </div>
+                    <h3 class="font-semibold">Fiction</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-gray-50 transition">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-atom fa-2x"></i>
+                    </div>
+                    <h3 class="font-semibold">Science</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-gray-50 transition">
+                    <div class="text-blue-600 mb-2">
+                        <i fa-2x"></i>
+                    </div>
+                    <h3 class="font-semibold">History</h3>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-gray-50 transition">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-heart fa-2x"></i>
+                    </div>
+                    <h3 class="font-semibold">Romance</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="bg-blue-50 py-12">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="text-gray-600 mb-8">Subscribe to our newsletter for the latest books and exclusive offers.</p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </div>
+@endsection
+        
+        
     </body>
 
 </html>
